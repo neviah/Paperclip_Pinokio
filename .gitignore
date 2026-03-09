@@ -1,0 +1,15 @@
+# Ignore cloned runtime repos and generated app data
+sandbox/server/
+sandbox/ui/
+sandbox/data/
+
+# Keep editable app config template tracked
+!sandbox/config/
+!sandbox/config/settings.json
+
+# Node artifacts
+node_modules/
+.pnpm-store/
+
+# Logs
+*.log
