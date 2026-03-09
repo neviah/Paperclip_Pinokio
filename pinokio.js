@@ -12,7 +12,7 @@ module.exports = {
     const running = {
       install: info.running("install.js"),
       start: info.running("start.js"),
-      update: info.running("update.js"),
+      update: info.running("update.js") || info.running("_update_steps.js"),
     };
 
     if (running.install) {
