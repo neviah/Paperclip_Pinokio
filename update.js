@@ -4,7 +4,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/server",
-        message: ["git pull", "corepack enable", "pnpm install"],
+        message: ["git pull", "npx --yes pnpm@9.15.9 install"],
       },
     },
     {
@@ -13,9 +13,8 @@ module.exports = {
         path: "sandbox/ui",
         message: [
           "git pull",
-          "corepack enable",
-          "pnpm install",
-          "pnpm --filter @paperclipai/ui build",
+          "npx --yes pnpm@9.15.9 install",
+          "npx --yes pnpm@9.15.9 --filter @paperclipai/ui build",
         ],
       },
     },

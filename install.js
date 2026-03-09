@@ -31,8 +31,7 @@ module.exports = {
       params: {
         path: "sandbox/server",
         message: [
-          "corepack enable",
-          "pnpm install",
+          "npx --yes pnpm@9.15.9 install",
         ],
       },
     },
@@ -41,8 +40,7 @@ module.exports = {
       params: {
         path: "sandbox/ui",
         message: [
-          "corepack enable",
-          "pnpm install",
+          "npx --yes pnpm@9.15.9 install",
         ],
       },
     },
@@ -51,7 +49,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/ui",
-        message: ["pnpm --filter @paperclipai/ui build"],
+        message: ["npx --yes pnpm@9.15.9 --filter @paperclipai/ui build"],
       },
     },
 
