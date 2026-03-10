@@ -32,6 +32,7 @@ module.exports = {
         path: "sandbox/server",
         message: [
           "npx --yes pnpm@9.15.9 install --prod=false",
+          "npx --yes pnpm@9.15.9 add -Dw esbuild@0.27.3 tsx@4.21.0",
         ],
       },
     },

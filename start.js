@@ -5,7 +5,10 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/server",
-        message: ["npx --yes pnpm@9.15.9 install --prod=false --prefer-offline"],
+        message: [
+          "npx --yes pnpm@9.15.9 install --prod=false --prefer-offline",
+          "npx --yes pnpm@9.15.9 add -Dw esbuild@0.27.3 tsx@4.21.0",
+        ],
       },
     },
     {
