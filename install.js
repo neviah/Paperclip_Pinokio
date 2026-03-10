@@ -31,7 +31,7 @@ module.exports = {
       params: {
         path: "sandbox/server",
         message: [
-          "npx --yes pnpm@9.15.9 install",
+          "npx --yes pnpm@9.15.9 install --prod=false",
         ],
       },
     },
@@ -40,7 +40,7 @@ module.exports = {
       params: {
         path: "sandbox/ui",
         message: [
-          "npx --yes pnpm@9.15.9 install",
+          "npx --yes pnpm@9.15.9 install --prod=false",
         ],
       },
     },

@@ -4,7 +4,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/server",
-        message: ["git pull", "npx --yes pnpm@9.15.9 install"],
+        message: ["git pull", "npx --yes pnpm@9.15.9 install --prod=false"],
       },
     },
     {
