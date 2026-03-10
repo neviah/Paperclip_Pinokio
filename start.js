@@ -9,6 +9,16 @@ module.exports = {
       },
     },
     {
+      when: "{{!exists('sandbox/data/instances/default/config.json')}}",
+      method: "shell.run",
+      params: {
+        path: "sandbox/server",
+        message: [
+          "node -e \"const cp=require('child_process');const path=require('path');const bin=process.platform==='win32'?'npx.cmd':'npx';const args=['--yes','paperclipai@latest','onboard','--yes','--data-dir',path.resolve('..','data')];const child=cp.spawn(bin,args,{cwd:process.cwd(),stdio:'inherit',shell:process.platform==='win32'});child.on('exit',(code)=>process.exit(code??0));\"",
+        ],
+      },
+    },
+    {
       method: "shell.run",
       params: {
         path: "sandbox/server",
