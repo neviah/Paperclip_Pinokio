@@ -5,10 +5,10 @@ module.exports = {
       params: {
         path: "sandbox/server",
         message: [
-          "git checkout -- package.json pnpm-lock.yaml",
-          "git pull",
-          "npx --yes pnpm@9.15.9 install --prod=false",
-          "npx --yes pnpm@9.15.9 add -Dw esbuild@0.27.3 tsx@4.21.0",
+           "git checkout -- package.json pnpm-lock.yaml",
+           "git pull",
+           "npx --yes pnpm@9.15.9 add -Dw esbuild@0.27.3 tsx@4.21.0",
+           "npx --yes pnpm@9.15.9 install --prod=false --force",
         ],
       },
     },
