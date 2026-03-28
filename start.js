@@ -6,7 +6,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/server",
-        message: ["git pull"],
+        message: ["git checkout -- package.json pnpm-lock.yaml", "git pull"],
       },
     },
     {
@@ -14,7 +14,7 @@ module.exports = {
       method: "shell.run",
       params: {
         path: "sandbox/ui",
-        message: ["git pull"],
+        message: ["git checkout -- pnpm-lock.yaml", "git pull"],
       },
     },
     {
