@@ -10,6 +10,7 @@ Pinokio wrapper for [paperclipai/paperclip](https://github.com/paperclipai/paper
 - Installs dependencies in both clones
 - Builds UI from `sandbox/ui`
 - Copies built UI into `sandbox/server/server/ui-dist`
+- Pulls latest upstream changes on every Start
 - Starts Paperclip from `sandbox/server` and exposes the local web UI inside Pinokio
 - Uses `sandbox/config/settings.json` for runtime port/env config
 
@@ -40,6 +41,7 @@ Notes:
 - `serverPort` is used as `PORT` for Paperclip.
 - `env` is injected directly into the Paperclip process, so cloud integrations and API keys work normally.
 - `uiPort` is included for compatibility with the requested schema.
+- Start uses `paperclipai@latest`, so CLI/runtime follows upstream releases.
 
 ## Run
 

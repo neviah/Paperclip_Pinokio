@@ -2,6 +2,22 @@ module.exports = {
   daemon: true,
   run: [
     {
+      when: "{{exists('sandbox/server/.git')}}",
+      method: "shell.run",
+      params: {
+        path: "sandbox/server",
+        message: ["git pull"],
+      },
+    },
+    {
+      when: "{{exists('sandbox/ui/.git')}}",
+      method: "shell.run",
+      params: {
+        path: "sandbox/ui",
+        message: ["git pull"],
+      },
+    },
+    {
       method: "shell.run",
       params: {
         path: "sandbox/server",
